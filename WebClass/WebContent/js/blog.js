@@ -37,7 +37,7 @@ $(document).ready(function () {
                 //alert(data.form.id + '님 로그인되었습니다.');
                 var myModal = $('#myModal2');
                 myModal.modal();
-                myModal.find('.modal-body').text(data.form.id + "님 로그인되었습니다.");
+                myModal.find('.modal-body').text(data.form.id + "님 회원가입 되었습니다.");
             }
         );
     });
