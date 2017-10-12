@@ -20,6 +20,7 @@ $(document).ready(function () {
         );
     });
 });
+
 $(document).ready(function () {
     $('#RegistForm').submit(function (event) {
         //submt이 자동으로 되는 기능을 막기
