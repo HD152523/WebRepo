@@ -67,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 		    	user.setNickName("ÀÇÀû");
 		    	session.setAttribute("user", user);
 		    	
-		    	RequestDispatcher rd = request.getRequestDispatcher("jsp/home.jsp");
+		    	RequestDispatcher rd = request.getRequestDispatcher("jsp/home_re.jsp");
 			    rd.forward(request, response);
 		    } else {
 		    	throw new Exception("E0003");

@@ -13,37 +13,33 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet(description = "logout", urlPatterns = { "/logout" })
-public class LogoutServlet extends HttpServlet {
+@WebServlet(description = "bloglogout", urlPatterns = { "/bloglogout" })
+public class BlogLogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LogoutServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public BlogLogoutServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		HttpSession session = request.getSession();
-    	session.removeAttribute("user");
-    	session.invalidate();
-    	
-    	response.setContentType("text/html;charset=utf-8");
-    	RequestDispatcher rd = request.getRequestDispatcher("jsp/home_re.jsp");
-	    rd.forward(request, response);
+		session.removeAttribute("user");
+		session.invalidate();
+
+		response.setContentType("text/html;charset=UTF-8");
+		RequestDispatcher rd = request.getRequestDispatcher("myblog/home.jsp");
+		rd.forward(request, response);
 	}
 
 }
